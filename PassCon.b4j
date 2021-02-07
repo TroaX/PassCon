@@ -1,0 +1,141 @@
+﻿AppType=JavaFX
+Build1=Default,b4j.example
+File1=HelpWindow.bjl
+File2=Layout1.bjl
+File3=PlattformView.bjl
+FileGroup1=Default Group
+FileGroup2=Default Group
+FileGroup3=Default Group
+Group=Default Group
+Library1=b4xcollections
+Library2=jcore
+Library3=jfx
+Library4=jxui
+Library5=encryption
+Module1=HelpDialog
+Module2=PatternMashine
+NumberOfFiles=3
+NumberOfLibraries=5
+NumberOfModules=2
+Version=8.8
+@EndOfDesignText@
+#Region Project Attributes 
+	#MainFormWidth: 300
+	#MainFormHeight: 270 
+#End Region
+
+Sub Process_Globals
+	Private fx As JFX
+	Private MainForm As Form
+	Private xui As XUI 
+	Private btnConvert As B4XView
+	Private strConvertedPass As TextField
+	Private strRawPass As TextField
+	Private comboChangePlattform As ComboBox
+	Private HashLib As MessageDigest
+End Sub
+
+' Programm Start
+Sub AppStart (Form1 As Form, Args() As String)
+	MainForm = Form1
+	MainForm.RootPane.LoadLayout("Layout1")
+	ListPlattforms
+	CheckSelection
+	MainForm.Resizable = False
+	MainForm.Show
+End Sub
+
+' Check Selection of the Combobox Dropdown
+Private Sub CheckSelection()
+	If comboChangePlattform.SelectedIndex = -1 Then
+		btnConvert.Enabled = False
+		btnConvert.TextColor = fx.Colors.To32Bit(fx.Colors.Red)
+	Else
+		btnConvert.Enabled = True
+		btnConvert.TextColor = fx.Colors.To32Bit(fx.Colors.Black)
+	End If
+End Sub
+
+' Get List of All Plattforms
+Private Sub ListPlattforms()
+	Private PlattformFiles As List
+	comboChangePlattform.Items.Clear()	
+	If File.Exists(PatternMashine.PlattformDir,"") Then
+		PlattformFiles.Initialize
+		PlattformFiles = File.ListFiles(PatternMashine.PlattformDir)
+		If PlattformFiles.Size > 0 Then
+			For Each Value As String In PlattformFiles
+				If Value.Contains(".plat") Then
+					comboChangePlattform.Items.Add(Value.Replace(".plat", ""))
+				End If
+			Next
+		End If
+	End If
+End Sub
+
+
+' Effents Mainwindow
+Private Sub btnConvert_Click
+	Private HashBytes(64) As Byte
+	Private CharIndexes(64) As Int
+	Private CharCount = 0 As Int
+	Private PlattformMap As Map
+	Private FileNames As List
+	Private CharList() As String
+	Private Pattern As String
+	Private NewPassword As StringBuilder
+	
+	If strRawPass.Text = "" Then
+		xui.MsgboxAsync("Bitte ein Passwort eintragen!", "Fehler")
+		Return
+	End If
+	HashBytes = HashLib.GetMessageDigest(strRawPass.Text.GetBytes("UTF8"), "SHA-512")
+	
+	For cnt = 0 To 63
+		CharIndexes(cnt) = PatternMashine.ToUnsigned(HashBytes(cnt))
+		CharCount = CharCount + CharIndexes(cnt)
+	Next
+	
+	CharCount = (CharCount Mod 16) + 16
+	
+	FileNames.Initialize
+	FileNames = comboChangePlattform.Items
+	
+	PlattformMap.Initialize
+	PlattformMap = File.ReadMap(PatternMashine.PlattformDir,FileNames.Get(comboChangePlattform.SelectedIndex) & ".plat")
+	
+	If PlattformMap.ContainsKey("Plattform") = False And PlattformMap.ContainsKey("Pattern") = False Then
+		xui.MsgboxAsync("Die Plattform-Datei ist ungültig", "Fataler Fehler!!!")
+		Return
+	End If
+	
+	NewPassword.Initialize
+	Pattern = PlattformMap.Get("Pattern")
+	CharList = Regex.Split("",Pattern)
+	
+	For cnt = 0 To CharCount - 1
+		NewPassword.Append(CharList(CharIndexes(cnt) Mod (CharIndexes.Length - 1)))
+	Next
+	
+	strConvertedPass.Text = NewPassword
+End Sub
+
+Private Sub btnAddPlattform_Click
+	PatternMashine.Show
+	ListPlattforms
+	CheckSelection
+End Sub
+
+Private Sub btnPassToClip_Click
+	If strConvertedPass.Text <> "" Then
+		fx.Clipboard.SetString(strConvertedPass.Text)
+	End If
+End Sub
+
+Private Sub comboChangePlattform_SelectedIndexChanged(Index As Int, Value As Object)
+	CheckSelection
+End Sub
+
+Private Sub btnHelp_Click
+	HelpDialog.OpenHelp
+End Sub
