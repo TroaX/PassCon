@@ -114,7 +114,7 @@ Private Sub btnConvert_Click
 	CharList = Regex.Split("",Pattern)
 	
 	For cnt = 0 To CharCount - 1
-		NewPassword.Append(CharList(CharIndexes(cnt) Mod (CharIndexes.Length - 1)))
+		NewPassword.Append(CharList(CharIndexes(cnt) Mod (CharList.Length - 1)))
 	Next
 	
 	strConvertedPass.Text = NewPassword
