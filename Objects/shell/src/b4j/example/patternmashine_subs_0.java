@@ -406,6 +406,82 @@ catch (Exception e) {
 finally {
 			Debug.PopSubsStack();
 		}}
+public static RemoteObject  _strplattformexperience_action() throws Exception{
+try {
+		Debug.PushSubsStack("strPlattformExperience_Action (patternmashine) ","patternmashine",1,patternmashine.ba,patternmashine.mostCurrent,160);
+if (RapidSub.canDelegate("strplattformexperience_action")) { return b4j.example.patternmashine.remoteMe.runUserSub(false, "patternmashine","strplattformexperience_action");}
+ BA.debugLineNum = 160;BA.debugLine="Private Sub strPlattformExperience_Action";
+Debug.ShouldStop(-2147483648);
+ BA.debugLineNum = 161;BA.debugLine="btnPlattformAdd_Click";
+Debug.ShouldStop(1);
+_btnplattformadd_click();
+ BA.debugLineNum = 162;BA.debugLine="End Sub";
+Debug.ShouldStop(2);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _strplattformlogin_action() throws Exception{
+try {
+		Debug.PushSubsStack("strPlattformLogin_Action (patternmashine) ","patternmashine",1,patternmashine.ba,patternmashine.mostCurrent,156);
+if (RapidSub.canDelegate("strplattformlogin_action")) { return b4j.example.patternmashine.remoteMe.runUserSub(false, "patternmashine","strplattformlogin_action");}
+ BA.debugLineNum = 156;BA.debugLine="Private Sub strPlattformLogin_Action";
+Debug.ShouldStop(134217728);
+ BA.debugLineNum = 157;BA.debugLine="btnPlattformAdd_Click";
+Debug.ShouldStop(268435456);
+_btnplattformadd_click();
+ BA.debugLineNum = 158;BA.debugLine="End Sub";
+Debug.ShouldStop(536870912);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _strplattformname_action() throws Exception{
+try {
+		Debug.PushSubsStack("strPlattformName_Action (patternmashine) ","patternmashine",1,patternmashine.ba,patternmashine.mostCurrent,152);
+if (RapidSub.canDelegate("strplattformname_action")) { return b4j.example.patternmashine.remoteMe.runUserSub(false, "patternmashine","strplattformname_action");}
+ BA.debugLineNum = 152;BA.debugLine="Private Sub strPlattformName_Action";
+Debug.ShouldStop(8388608);
+ BA.debugLineNum = 153;BA.debugLine="btnPlattformAdd_Click";
+Debug.ShouldStop(16777216);
+_btnplattformadd_click();
+ BA.debugLineNum = 154;BA.debugLine="End Sub";
+Debug.ShouldStop(33554432);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _strplattformtarget_action() throws Exception{
+try {
+		Debug.PushSubsStack("strPlattformTarget_Action (patternmashine) ","patternmashine",1,patternmashine.ba,patternmashine.mostCurrent,148);
+if (RapidSub.canDelegate("strplattformtarget_action")) { return b4j.example.patternmashine.remoteMe.runUserSub(false, "patternmashine","strplattformtarget_action");}
+ BA.debugLineNum = 148;BA.debugLine="Private Sub strPlattformTarget_Action";
+Debug.ShouldStop(524288);
+ BA.debugLineNum = 149;BA.debugLine="btnPlattformAdd_Click";
+Debug.ShouldStop(1048576);
+_btnplattformadd_click();
+ BA.debugLineNum = 150;BA.debugLine="End Sub";
+Debug.ShouldStop(2097152);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
 public static RemoteObject  _tounsigned(RemoteObject _b) throws Exception{
 try {
 		Debug.PushSubsStack("ToUnsigned (patternmashine) ","patternmashine",1,patternmashine.ba,patternmashine.mostCurrent,25);

@@ -150,3 +150,19 @@ Public Sub PlattformDirParent() As String
 		Return GetSystemProperty("user.home","") & "/Documents/"
 	End If
 End Sub
+
+Private Sub strPlattformTarget_Action
+	btnPlattformAdd_Click
+End Sub
+
+Private Sub strPlattformName_Action
+	btnPlattformAdd_Click
+End Sub
+
+Private Sub strPlattformLogin_Action
+	btnPlattformAdd_Click
+End Sub
+
+Private Sub strPlattformExperience_Action
+	btnPlattformAdd_Click
+End Sub
