@@ -7,6 +7,6 @@ ModuleBreakpoints2=
 ModuleClosedNodes0=1
 ModuleClosedNodes1=
 ModuleClosedNodes2=
-NavigationStack=Main,AppStart,17,0,Main,btnConvert_Click,99,6,Visueller Designer,Layout1.bjl,-100,3,Visueller Designer,HelpWindow.bjl,-100,1,HelpDialog,Process_Globals,3,4,Main,Process_Globals,7,0,Main,btnHelp_Click,118,4,HelpDialog,OpenHelp,9,1,PatternMashine,Show,19,0,PatternMashine,btnPlattformAdd_Click,125,6,Main,btnPassToClip_Click,111,0
+NavigationStack=Visueller Designer,Layout1.bjl,-100,3,Visueller Designer,HelpWindow.bjl,-100,1,HelpDialog,Process_Globals,3,4,Main,Process_Globals,7,0,Main,btnHelp_Click,118,4,HelpDialog,OpenHelp,9,1,PatternMashine,Show,19,0,PatternMashine,btnPlattformAdd_Click,125,6,Main,btnPassToClip_Click,111,0,Main,AppStart,20,0,Main,btnConvert_Click,95,0
 SelectedBuild=0
 VisibleModules=2,1
