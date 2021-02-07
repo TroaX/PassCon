@@ -32,29 +32,29 @@ public static String  _openhelp() throws Exception{
 RDebugUtils.currentModule="helpdialog";
 if (Debug.shouldDelegate(ba, "openhelp", false))
 	 {return ((String) Debug.delegate(ba, "openhelp", null));}
-RDebugUtils.currentLine=1245184;
- //BA.debugLineNum = 1245184;BA.debugLine="Public Sub OpenHelp";
-RDebugUtils.currentLine=1245185;
- //BA.debugLineNum = 1245185;BA.debugLine="If frm.IsInitialized = False Then";
+RDebugUtils.currentLine=4521984;
+ //BA.debugLineNum = 4521984;BA.debugLine="Public Sub OpenHelp";
+RDebugUtils.currentLine=4521985;
+ //BA.debugLineNum = 4521985;BA.debugLine="If frm.IsInitialized = False Then";
 if (_frm.IsInitialized()==anywheresoftware.b4a.keywords.Common.False) { 
-RDebugUtils.currentLine=1245186;
- //BA.debugLineNum = 1245186;BA.debugLine="frm.Initialize(\"frm\",-1, -1)";
+RDebugUtils.currentLine=4521986;
+ //BA.debugLineNum = 4521986;BA.debugLine="frm.Initialize(\"frm\",-1, -1)";
 _frm.Initialize(ba,"frm",-1,-1);
-RDebugUtils.currentLine=1245187;
- //BA.debugLineNum = 1245187;BA.debugLine="frm.RootPane.LoadLayout(\"HelpWindow\")";
+RDebugUtils.currentLine=4521987;
+ //BA.debugLineNum = 4521987;BA.debugLine="frm.RootPane.LoadLayout(\"HelpWindow\")";
 _frm.getRootPane().LoadLayout(ba,"HelpWindow");
-RDebugUtils.currentLine=1245188;
- //BA.debugLineNum = 1245188;BA.debugLine="frm.Resizable = False";
+RDebugUtils.currentLine=4521988;
+ //BA.debugLineNum = 4521988;BA.debugLine="frm.Resizable = False";
 _frm.setResizable(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=1245189;
- //BA.debugLineNum = 1245189;BA.debugLine="frm.SetFormStyle(\"UTILITY\")";
+RDebugUtils.currentLine=4521989;
+ //BA.debugLineNum = 4521989;BA.debugLine="frm.SetFormStyle(\"UTILITY\")";
 _frm.SetFormStyle("UTILITY");
  };
-RDebugUtils.currentLine=1245191;
- //BA.debugLineNum = 1245191;BA.debugLine="frm.ShowAndWait";
+RDebugUtils.currentLine=4521991;
+ //BA.debugLineNum = 4521991;BA.debugLine="frm.ShowAndWait";
 _frm.ShowAndWait();
-RDebugUtils.currentLine=1245192;
- //BA.debugLineNum = 1245192;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4521992;
+ //BA.debugLineNum = 4521992;BA.debugLine="End Sub";
 return "";
 }
 }

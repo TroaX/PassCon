@@ -46,13 +46,15 @@ Sub AppStart (Form1 As Form, Args() As String)
 End Sub
 
 ' Check Selection of the Combobox Dropdown
-Private Sub CheckSelection()
+Private Sub CheckSelection() As Boolean
 	If comboChangePlattform.SelectedIndex = -1 Then
 		btnConvert.Enabled = False
 		btnConvert.TextColor = fx.Colors.To32Bit(fx.Colors.Red)
+		Return False
 	Else
 		btnConvert.Enabled = True
 		btnConvert.TextColor = fx.Colors.To32Bit(fx.Colors.Black)
+		Return True
 	End If
 End Sub
 
@@ -74,7 +76,7 @@ Private Sub ListPlattforms()
 End Sub
 
 
-' Effents Mainwindow
+' Events Mainwindow
 Private Sub btnConvert_Click
 	Private HashBytes(64) As Byte
 	Private CharIndexes(64) As Int
@@ -138,4 +140,10 @@ End Sub
 
 Private Sub btnHelp_Click
 	HelpDialog.OpenHelp
+End Sub
+
+Private Sub strRawPass_Action
+	If CheckSelection Then
+		btnConvert_Click
+	End If
 End Sub

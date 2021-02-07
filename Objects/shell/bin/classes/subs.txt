@@ -15,31 +15,31 @@ main,appstart,1,0,18,25
 ,mainform,,btnconvert,,combochangeplattform,,strconvertedpass,,strrawpass,,fx
 ,mainform,,btnconvert,,combochangeplattform,,strconvertedpass,,strrawpass
 ,listplattforms,,checkselection,patternmashine,plattformdir
-main,listplattforms,0,0,39,53
+main,listplattforms,0,0,41,55
 ,combochangeplattform
 
 patternmashine,plattformdir
-main,checkselection,0,0,28,36
+main,checkselection,0,0,28,38
 ,combochangeplattform,,btnconvert,,fx
 
 
-main,btnaddplattform_click,1,0,102,106
+main,btnaddplattform_click,1,0,104,108
 patternmashine,frm,patternmashine,strplattformexperience,patternmashine,strplattformlogin,patternmashine,strplattformname,patternmashine,strplattformtarget,,combochangeplattform,,btnconvert,,fx
 patternmashine,strplattformexperience,patternmashine,strplattformlogin,patternmashine,strplattformname,patternmashine,strplattformtarget
 patternmashine,show,,listplattforms,,checkselection,patternmashine,plattformdir
-main,btnconvert_click,0,0,57,100
+main,btnconvert_click,0,0,59,102
 ,strrawpass,,xui,,hashlib,,combochangeplattform,,strconvertedpass
 
 patternmashine,tounsigned,patternmashine,plattformdir
-main,btnhelp_click,1,0,118,120
+main,btnhelp_click,1,0,120,122
 helpdialog,frm
 
 helpdialog,openhelp
-main,btnpasstoclip_click,0,0,108,112
+main,btnpasstoclip_click,0,0,110,114
 ,strconvertedpass,,fx
 
 
-main,combochangeplattform_selectedindexchanged,0,0,114,116
+main,combochangeplattform_selectedindexchanged,0,0,116,118
 ,combochangeplattform,,btnconvert,,fx
 
 ,checkselection
@@ -47,6 +47,10 @@ main,process_globals,0,1,6,15
 
 
 
+main,strrawpass_action,0,0,124,128
+,combochangeplattform,,btnconvert,,fx,,strrawpass,,xui,,hashlib,,strconvertedpass
+
+,checkselection,,btnconvert_click,patternmashine,tounsigned,patternmashine,plattformdir
 patternmashine,show,1,0,14,22
 ,frm,,strplattformexperience,,strplattformlogin,,strplattformname,,strplattformtarget
 ,strplattformexperience,,strplattformlogin,,strplattformname,,strplattformtarget
@@ -83,6 +87,22 @@ patternmashine,process_globals,0,1,2,11
 
 
 
+patternmashine,strplattformexperience_action,0,0,160,162
+,strplattformname,,strplattformtarget,,strplattformlogin,,strplattformexperience,,xui,,frm,,hashlib
+
+,btnplattformadd_click,,generatepattern,,generateseed,,plattformdir,,plattformdirparent,,clearfilename,,tounsigned
+patternmashine,strplattformlogin_action,0,0,156,158
+,strplattformname,,strplattformtarget,,strplattformlogin,,strplattformexperience,,xui,,frm,,hashlib
+
+,btnplattformadd_click,,generatepattern,,generateseed,,plattformdir,,plattformdirparent,,clearfilename,,tounsigned
+patternmashine,strplattformname_action,0,0,152,154
+,strplattformname,,strplattformtarget,,strplattformlogin,,strplattformexperience,,xui,,frm,,hashlib
+
+,btnplattformadd_click,,generatepattern,,generateseed,,plattformdir,,plattformdirparent,,clearfilename,,tounsigned
+patternmashine,strplattformtarget_action,0,0,148,150
+,strplattformname,,strplattformtarget,,strplattformlogin,,strplattformexperience,,xui,,frm,,hashlib
+
+,btnplattformadd_click,,generatepattern,,generateseed,,plattformdir,,plattformdirparent,,clearfilename,,tounsigned
 helpdialog,openhelp,1,0,7,15
 ,frm
 
