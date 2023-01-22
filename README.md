@@ -1,6 +1,10 @@
 # PassCon
 Kleiner Passwort-Konverter in B4J geschrieben.
 
+**WICHTIG: Die entwicklung dieses Projects wird nicht fortgeführt. Es ist eine Umsetzung mit B4J als PWA inkl. Backend geplant, um eine plattformunabhängige und trotzdem dezentrale Lösung zu bieten. Dieses Project wird unter anderem Namen realisiert.**
+
+**IMPORTANT: The development of this project will not be continued. An implementation with B4J as a PWA including backend is planned in order to offer a platform-independent yet decentralized solution. This project is realized under a different name.**
+
 ## Beweggründe
 Im Gegensatz zu klassischen Passwort-Managern speichert PassCon keine Passwörter. Alles was gespeichert wird, sind erzeugte Plattform-Profile, die nichts anderes als den Namen der Plattform sowie eine willkürlich wirkende Zeichentabelle. Alle Zeichentabellen enthalten immer die gleiche Anzahl an Zeichen und von jedem Zeichen die gleiche Anzahl an Vorkommen. Der einzige Unterschied ist nur die Reihenfolge. Diese wird durch sogenannte Seeds bestimmt, welche aus den Profildaten generiert werden, die bei Anlegen eines neuen Plattformprofils eingegeben werden. Bei Bedachter Wahl dieser Daten können sogar die Profile wieder hergestellt werden, wenn keine Datensicherung erfolgte oder man temporär ein Profil auf einem anderen System anlegen muss, ohne Zugriff auf das Erstsystem zu haben.
 Grundpfeiler hierfür ist die Assoziation, die bei uns Menschen immer und zu jeder Zeit stattfindet. Wir assoziieren ständig. Dadurch sind wir in der Lage, auch gewisse temporäre oder primäre Informationen abzurufen. Weder mit den Daten aus den Profilen noch mit den Daten, die zur Profilherstellung benötigt werden, kann irgendwer wirklich etwas anfangen. Und da am Ende nur der Profilname sowie das Zeichenpattern (Zeichentabelle) gespeichert werden, existieren im Grunde keine Daten, die einen wirklichen Rückschluss auf verwendete Passwörter zulassen. Inspiriert wurde das ganze von "Kryptonizer". Ein Schlüsselanhänger, mit dem ein primitives Wort zu einem einigermaßen sicheren Passwort aufgeschlüsselt werden kann.
